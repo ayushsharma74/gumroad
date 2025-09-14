@@ -34,6 +34,7 @@ import { assertResponseError } from "$app/utils/request";
 
 import { Button } from "$app/components/Button";
 import { Icon } from "$app/components/Icons";
+import { Input } from "$app/components/Input";
 import { useLoggedInUser } from "$app/components/LoggedInUser";
 import { Modal } from "$app/components/Modal";
 import { NumberInput } from "$app/components/NumberInput";
@@ -498,15 +499,13 @@ const CollaboratorForm = () => {
               <legend>
                 <label htmlFor="email">Email</label>
               </legend>
-              <div className="input">
-                <input
-                  id="email"
-                  type="email"
-                  value={collaboratorEmail.value}
-                  placeholder="Collaborator's Gumroad account email"
-                  onChange={(e) => setCollaboratorEmail({ value: e.target.value.trim() })}
-                />
-              </div>
+              <Input
+                id="email"
+                type="email"
+                value={collaboratorEmail.value}
+                placeholder="Collaborator's Gumroad account email"
+                onChange={(e) => setCollaboratorEmail({ value: e.target.value.trim() })}
+              />
             </fieldset>
           ) : null}
           <fieldset>
