@@ -210,7 +210,7 @@ const Discover = (props: Props) => {
           />
         ) : null}
         <section className="paragraphs">
-          <div style={{ display: "flex", justifyContent: "space-between", gap: "var(--spacer-2)", flexWrap: "wrap" }}>
+          <div>
             <h2>
               {state.params.query
                 ? state.results?.products.length
