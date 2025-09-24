@@ -133,13 +133,14 @@ const CollaboratorDetails = ({
       <section className="mt-auto flex gap-4">
         <Link
           to={`/collaborators/${selectedCollaborator.id}/edit`}
-          className="button"
+          className="button flex-1"
           aria-label="Edit"
           inert={!loggedInUser?.policies.collaborator.update || navigation.state !== "idle"}
         >
           Edit
         </Link>
         <Button
+          className="flex-1"
           color="danger"
           aria-label="Delete"
           onClick={() => onRemove(selectedCollaborator.id)}
