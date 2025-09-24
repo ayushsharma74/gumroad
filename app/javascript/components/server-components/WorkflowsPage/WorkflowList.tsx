@@ -118,9 +118,9 @@ const WorkflowRow = ({
   onDelete: () => void;
 }) => {
   const header = (
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <h3 style={{ marginRight: "auto" }}>{workflow.name}</h3>
-      <div style={{ display: "flex", gap: "var(--spacer-4)", alignItems: "center" }}>
+    <div className="flex items-center">
+      <h3 className="mr-auto">{workflow.name}</h3>
+      <div className="flex items-center gap-4">
         {workflow.published ? <small>Published</small> : <small>Unpublished</small>}
         <div className="button-group">
           <Link
@@ -164,13 +164,13 @@ const WorkflowRow = ({
                 <td data-label="Delay">
                   {installment.delayed_delivery_time_duration} {installment.displayed_delayed_delivery_time_period}
                 </td>
-                <td data-label="Sent" style={{ whiteSpace: "nowrap" }}>
+                <td data-label="Sent" className="whitespace-nowrap">
                   {formatStatNumber({ value: installment.sent_count ?? 0 })}
                 </td>
-                <td data-label="Opens" style={{ whiteSpace: "nowrap" }}>
+                <td data-label="Opens" className="whitespace-nowrap">
                   {`${formatStatNumber({ value: installment.open_rate ?? 0 })}%`}
                 </td>
-                <td data-label="Clicks" style={{ whiteSpace: "nowrap" }}>
+                <td data-label="Clicks" className="whitespace-nowrap">
                   {formatStatNumber({ value: installment.click_count })}
                 </td>
               </>
