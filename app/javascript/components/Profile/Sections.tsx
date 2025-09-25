@@ -57,7 +57,7 @@ export type Section =
 export const PostsView = ({ posts }: { posts: Post[] }) => {
   const userAgentInfo = useUserAgentInfo();
   return (
-    <div>
+    <>
       {posts.map((post) => (
         <a
           key={post.slug}
@@ -71,7 +71,7 @@ export const PostsView = ({ posts }: { posts: Post[] }) => {
           <Icon name="arrow-diagonal-up-right" className="text-lg" />
         </a>
       ))}
-    </div>
+    </>
   );
 };
 
