@@ -199,7 +199,7 @@ export const FollowersPage = ({ followers: initialFollowers, per_page, total }: 
               </tbody>
             </table>
             {page * per_page < totalFilteredCount ? (
-              <Button color="primary" onClick={() => void loadFollowers(searchQuery, page + 1)} className="mt-5">
+              <Button color="primary" onClick={() => void loadFollowers(searchQuery, page + 1)} className="mt-6">
                 Load more
               </Button>
             ) : null}
