@@ -98,7 +98,7 @@ export const AudioPlayer = (props: Props) => {
       />
       {isLoaded ? (
         <>
-          <div role="toolbar" className="flex items-center gap-2 text-xl leading-[1.3]">
+          <div role="toolbar" className="flex items-center gap-2 text-xl">
             {isPlaying ? (
               <button type="button" onClick={pauseAudio} aria-label="Pause">
                 <Icon name="circle-pause" />
@@ -115,7 +115,7 @@ export const AudioPlayer = (props: Props) => {
               <Icon name="skip-forward-30" />
             </button>
           </div>
-          <time aria-label="Progress" className="text-sm tabular-nums leading-[1.3]">
+          <time aria-label="Progress" className="text-sm tabular-nums">
             {formattedTime(progress)}
           </time>
           <input
@@ -130,7 +130,7 @@ export const AudioPlayer = (props: Props) => {
             className="grow"
             style={{ "--progress": `${(progress * 100) / duration}%` }}
           />
-          <time aria-label="Remaining" className="text-sm tabular-nums leading-[1.3]">
+          <time aria-label="Remaining" className="text-sm tabular-nums">
             {formattedTime(duration - progress)}
           </time>
         </>
