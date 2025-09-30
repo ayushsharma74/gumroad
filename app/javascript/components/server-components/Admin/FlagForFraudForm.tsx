@@ -15,7 +15,7 @@ export const AdminFlagForFraudForm = ({ user_id }: { user_id: number }) => (
   >
     {(isLoading) => (
       <fieldset>
-        <div className="input-with-button" style={{ alignItems: "start" }}>
+        <div className="grid grid-flow-col gap-3 grid-cols-1 auto-cols-max items-start">
           <textarea name="flag_for_fraud[flag_note]" rows={3} placeholder="Add flag note (optional)" />
           <button type="submit" className="button" disabled={isLoading}>
             {isLoading ? "Submitting..." : "Submit"}
