@@ -718,7 +718,7 @@ const SendToKindleContainer = ({
 
   return (
     <div>
-      <div className="input-with-button">
+      <div className="grid grid-flow-col gap-3 grid-cols-1 auto-cols-max items-center">
         <fieldset className={cx({ danger: hasError })}>
           <input
             type="text"
